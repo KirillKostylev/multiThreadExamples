@@ -3,6 +3,10 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class LockWithCondition {
 
+    public static void printInfo() {
+        System.out.println("Info");
+    }
+
     public static void main(String[] args) {
         Store store = new Store();
         Producer producer = new Producer(store);
@@ -66,6 +70,7 @@ public class LockWithCondition {
                 locker.unlock();
             }
         }
+
     }
 
     // класс Производитель
